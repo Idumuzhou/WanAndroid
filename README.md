@@ -1,4 +1,4 @@
-# DawnComposeFade
+# 玩Android
 
 一个基于 [WanAndroid 开放 API](https://www.wanandroid.com/blog/show/2) 的 Android 学习项目，应用名称为“玩Android”。
 
