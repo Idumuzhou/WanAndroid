@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 圆形头像背景，用于未接入图片加载时展示用户头像占位。 -->
+<shape xmlns:android="http://schemas.android.com/apk/res/android" android:shape="oval">
+    <gradient
+        android:angle="315"
+        android:endColor="@color/avatar_gradient_end"
+        android:startColor="@color/avatar_gradient_start" />
+</shape>

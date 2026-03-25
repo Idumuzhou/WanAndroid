@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 我的页面背景，使用轻量暖色渐变提升页面氛围。 -->
+<shape xmlns:android="http://schemas.android.com/apk/res/android" android:shape="rectangle">
+    <gradient
+        android:angle="270"
+        android:endColor="@color/mine_page_end"
+        android:startColor="@color/mine_page_start" />
+</shape>

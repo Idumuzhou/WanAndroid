@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 体系页搜索入口的假搜索框背景。 -->
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle">
+
+    <corners android:radius="16dp" />
+    <solid android:color="@color/article_meta_chip_background" />
+    <stroke
+        android:width="1dp"
+        android:color="@color/surface_stroke_soft" />
+</shape>

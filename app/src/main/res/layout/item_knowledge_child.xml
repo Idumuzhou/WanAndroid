@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 知识体系二级分类项，按文字自适应宽度显示。 -->
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/textKnowledgeChildName"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_knowledge_child_item"
+    android:gravity="center"
+    android:maxLines="1"
+    android:minHeight="40dp"
+    android:paddingStart="14dp"
+    android:paddingTop="9dp"
+    android:paddingEnd="14dp"
+    android:paddingBottom="9dp"
+    android:textAppearance="@style/TextAppearance.Material3.LabelLarge"
+    android:textColor="@color/article_category_text" />

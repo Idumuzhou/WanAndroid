@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="screen_background">#FF0F141C</color>
+    <color name="surface_stroke_soft">#26FFFFFF</color>
+    <color name="article_card_background">#FF161D27</color>
+    <color name="article_badge_background">#FF5A4214</color>
+    <color name="article_badge_text">#FFFFD38C</color>
+    <color name="article_meta_chip_background">#FF202B38</color>
+    <color name="article_category_text">#FFA8C4F4</color>
+    <color name="banner_placeholder_start">#FF2F4E89</color>
+    <color name="banner_placeholder_end">#FF8C5D25</color>
+    <color name="avatar_gradient_start">#FF7C4A3A</color>
+    <color name="avatar_gradient_end">#FFB27A3B</color>
+    <color name="mine_page_start">#FF11161F</color>
+    <color name="mine_page_end">#FF0B1017</color>
+    <color name="mine_profile_start">#FF102746</color>
+    <color name="mine_profile_end">#FF355C9D</color>
+    <color name="mine_profile_primary_text">#FFF5F7FA</color>
+    <color name="mine_profile_secondary_text">#FFD6DEEC</color>
+    <color name="mine_profile_tertiary_text">#FFB8C5D8</color>
+</resources>

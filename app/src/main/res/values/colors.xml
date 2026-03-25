@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="screen_background">#FFF6F7FB</color>
+    <color name="surface_stroke_soft">#140F172A</color>
+    <color name="article_card_background">#FFFEFEFF</color>
+    <color name="article_badge_background">#FFF7E1B5</color>
+    <color name="article_badge_text">#FF8A4B00</color>
+    <color name="article_meta_chip_background">#FFF3F5F9</color>
+    <color name="article_category_text">#FF355070</color>
+    <color name="banner_placeholder_start">#FF5A7CFF</color>
+    <color name="banner_placeholder_end">#FFFFB36B</color>
+    <color name="avatar_gradient_start">#FFFF7E5F</color>
+    <color name="avatar_gradient_end">#FFFFB86C</color>
+    <color name="mine_page_start">#FFFFF4E8</color>
+    <color name="mine_page_end">#FFFFF7FB</color>
+    <color name="mine_profile_start">#FF143A7A</color>
+    <color name="mine_profile_end">#FF4D7CFE</color>
+    <color name="mine_profile_primary_text">#FFFFFFFF</color>
+    <color name="mine_profile_secondary_text">#FFE8F0FF</color>
+    <color name="mine_profile_tertiary_text">#FFDDE7FF</color>
+</resources>

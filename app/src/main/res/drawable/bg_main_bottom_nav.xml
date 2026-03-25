@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 主页面底部导航背景，保证深浅主题下都有清晰顶部分隔。 -->
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:drawable="?attr/colorSurface" />
+
+    <item android:gravity="top">
+        <shape android:shape="rectangle">
+            <size android:height="1dp" />
+            <solid android:color="@color/surface_stroke_soft" />
+        </shape>
+    </item>
+</layer-list>
