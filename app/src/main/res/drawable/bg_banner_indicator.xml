@@ -2,5 +2,8 @@
 <!-- Banner 页码指示背景，增强暗图场景下的对比度。 -->
 <shape xmlns:android="http://schemas.android.com/apk/res/android" android:shape="rectangle">
     <corners android:radius="999dp" />
-    <solid android:color="#33000000" />
+    <solid android:color="#2EFFFFFF" />
+    <stroke
+        android:width="1dp"
+        android:color="#26FFFFFF" />
 </shape>

@@ -5,9 +5,9 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_marginHorizontal="16dp"
-    android:layout_marginTop="14dp"
-    app:cardBackgroundColor="?attr/colorSurface"
-    app:cardCornerRadius="24dp"
+    android:layout_marginTop="16dp"
+    app:cardBackgroundColor="@color/article_card_background"
+    app:cardCornerRadius="26dp"
     app:cardElevation="0dp"
     app:strokeColor="@color/surface_stroke_soft"
     app:strokeWidth="1dp">
@@ -16,12 +16,13 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:padding="18dp">
+        android:padding="20dp">
 
         <TextView
             android:id="@+id/textKnowledgeParentTitle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:textColor="?attr/colorOnSurface"
             android:textAppearance="@style/TextAppearance.Material3.TitleMedium"
             android:textStyle="bold" />
 
@@ -29,7 +30,7 @@
             android:id="@+id/childKnowledgeFlowLayout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="14dp" />
+            android:layout_marginTop="16dp" />
     </LinearLayout>
 
 </com.google.android.material.card.MaterialCardView>

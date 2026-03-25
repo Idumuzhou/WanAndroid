@@ -11,31 +11,41 @@ import java.util.Locale
  */
 object HttpLogFormatter {
     private const val HttpTag = "HTTP"
+    private const val TransactionDivider = "############################################################"
     private const val RequestDivider = "================ REQUEST ================"
     private const val ResponseDivider = "================ RESPONSE ================"
     private const val ErrorDivider = "================ ERROR ================="
     private val timeFormatter = SimpleDateFormat("HH:mm:ss.SSS", Locale.getDefault())
 
-    fun logRequest(message: String) {
-        AppLogger.e(HttpTag, message = buildInterfaceDivider(message))
-        AppLogger.d(HttpTag, "$RequestDivider\n${prettify(message)}")
-    }
+    fun logTransaction(
+        request: String,
+        result: String,
+        isSuccessful: Boolean,
+        requestStartAtMillis: Long,
+        throwable: Throwable? = null
+    ) {
+        val resultDivider = if (throwable == null) ResponseDivider else ErrorDivider
+        val formattedMessage = buildString {
+            appendLine(buildInterfaceDivider(request, requestStartAtMillis))
+            appendLine(RequestDivider)
+            appendLine(prettify(request))
+            appendLine(resultDivider)
+            append(prettify(result))
+        }.trim()
 
-    fun logResponse(message: String, isSuccessful: Boolean) {
-        val formattedMessage = "$ResponseDivider\n${prettify(message)}"
+        logRedDivider()
+
         if (isSuccessful) {
             AppLogger.d(HttpTag, formattedMessage)
         } else {
-            AppLogger.e(HttpTag, message = formattedMessage)
+            AppLogger.e(tag = HttpTag, throwable = throwable, message = formattedMessage)
         }
+
+        logRedDivider()
     }
 
-    fun logError(message: String, throwable: Throwable? = null) {
-        AppLogger.e(
-            tag = HttpTag,
-            throwable = throwable,
-            message = "$ErrorDivider\n${prettify(message)}"
-        )
+    private fun logRedDivider() {
+        AppLogger.e(tag = HttpTag, message = TransactionDivider)
     }
 
     private fun prettify(message: String): String {
@@ -62,7 +72,7 @@ object HttpLogFormatter {
         }.getOrDefault(content)
     }
 
-    private fun buildInterfaceDivider(message: String): String {
+    private fun buildInterfaceDivider(message: String, requestStartAtMillis: Long): String {
         val firstLine = message.lineSequence().firstOrNull().orEmpty()
         val parts = firstLine.split(" ")
         val method = parts.getOrNull(0).orEmpty()
@@ -72,6 +82,6 @@ object HttpLogFormatter {
             .substringBefore("?")
             .ifBlank { "unknown" }
 
-        return "■■ $method $apiName ${timeFormatter.format(Date())} ■■"
+        return "■■ $method $apiName ${timeFormatter.format(Date(requestStartAtMillis))} ■■"
     }
 }

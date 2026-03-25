@@ -5,26 +5,27 @@
     android:layout_height="wrap_content"
     android:gravity="center"
     android:orientation="horizontal"
-    android:paddingTop="18dp"
-    android:paddingBottom="24dp">
+    android:paddingTop="20dp"
+    android:paddingBottom="28dp">
 
     <ProgressBar
         android:id="@+id/articleFooterProgress"
-        android:layout_width="20dp"
-        android:layout_height="20dp"
+        android:layout_width="18dp"
+        android:layout_height="18dp"
         android:visibility="gone" />
 
     <TextView
         android:id="@+id/articleFooterText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="12dp"
         android:background="@drawable/bg_article_meta_chip"
+        android:gravity="center"
+        android:minHeight="38dp"
         android:paddingStart="14dp"
         android:paddingTop="8dp"
         android:paddingEnd="14dp"
         android:paddingBottom="8dp"
-        android:textAppearance="@style/TextAppearance.Material3.BodyMedium"
+        android:textAppearance="@style/TextAppearance.Material3.LabelLarge"
         android:textColor="?attr/colorOnSurfaceVariant" />
 
 </LinearLayout>

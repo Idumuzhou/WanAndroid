@@ -2,7 +2,9 @@
 <!-- 首页 Banner 单页布局，负责展示单张轮播图片。 -->
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_banner_placeholder"
+    android:foreground="?attr/selectableItemBackground">
 
     <ImageView
         android:id="@+id/imageBanner"

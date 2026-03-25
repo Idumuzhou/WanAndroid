@@ -6,6 +6,7 @@ import android.view.ViewGroup
 import android.widget.ProgressBar
 import android.widget.TextView
 import androidx.core.view.isVisible
+import androidx.core.view.updateLayoutParams
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
@@ -127,17 +128,22 @@ class ArticleListAdapter(
 
         fun bind(isLoadingMore: Boolean, canLoadMore: Boolean) {
             val context = itemView.context
+            progressView.isVisible = isLoadingMore
+            textView.updateLayoutParams<ViewGroup.MarginLayoutParams> {
+                marginStart = if (isLoadingMore) {
+                    itemView.resources.getDimensionPixelSize(R.dimen.article_footer_text_spacing)
+                } else {
+                    0
+                }
+            }
             when {
                 isLoadingMore -> {
-                    progressView.visibility = View.VISIBLE
                     textView.text = context.getString(R.string.article_load_more_loading)
                 }
                 canLoadMore -> {
-                    progressView.visibility = View.GONE
                     textView.text = context.getString(R.string.article_load_more_idle)
                 }
                 else -> {
-                    progressView.visibility = View.GONE
                     textView.text = context.getString(R.string.article_load_more_finished)
                 }
             }
