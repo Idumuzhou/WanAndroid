@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="assets/logo.webp" alt="玩Android Logo" width="160" />
+</p>
+
 # 玩Android
 
 一个基于 [WanAndroid 开放 API](https://www.wanandroid.com/blog/show/2) 的 Android 学习项目，应用名称为“玩Android”。
